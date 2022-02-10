@@ -20,7 +20,11 @@ public class BlueAutoCarry extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         initialize();
 
+<<<<<<< HEAD
         drive(1, 300);
+=======
+        drive(1, 323);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         sleep(1);
 
@@ -30,7 +34,11 @@ public class BlueAutoCarry extends LinearOpMode {
 
         raiseBasket(500);
 
+<<<<<<< HEAD
         dropPully(930);
+=======
+        dropPully(950);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         sleep(1);
 
@@ -40,16 +48,23 @@ public class BlueAutoCarry extends LinearOpMode {
 
         strafe(-1, 1300);
 
+<<<<<<< HEAD
         strafe(-.25, 1600);
 
         sleep(1);
 
         dropDuck(4100);      // Duck spinner
+=======
+        sleep(1);
+
+        dropDuck(4000);      // Duck spinner
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         //heading to warehouse
 
         sleep(1);
 
+<<<<<<< HEAD
         strafe(1, 300);
 
         sleep(50);
@@ -67,11 +82,27 @@ public class BlueAutoCarry extends LinearOpMode {
         sleep(1);
 
         drive(.5, 950);
+=======
+        strafe(1, 400);
+
+        sleep(10);
+
+        turn(-1, 365);
+
+        sleep(1);
+
+        strafe(1, 1590);
+
+        sleep(1);
+
+        drive(.5, 900);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         sleep(1);
 
         drive(-1, 800);
 
+<<<<<<< HEAD
         drive(-.5, 670);
 
         strafe(-1, 1200);
@@ -105,6 +136,35 @@ public class BlueAutoCarry extends LinearOpMode {
         drive(1, 975);
 
         turn(1,250);
+=======
+        drive(-.5, 690);
+
+        strafe(-1, 1330);
+
+        drive(-1, 1000); //enter to warehouse
+
+        sleep(100);
+
+        strafe(-1, 800);
+
+        sleep(100);
+
+        intakeBox();
+
+        drive(-.5, 800); // start cycle
+
+        drive(0, 100);
+
+        drive(.5, 600);
+
+        drive(0, 100);
+
+        strafe(1, 650);
+
+        drive(0, 100);
+
+        drive(.5, 1800);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         raisePully(2000);
 
@@ -114,9 +174,13 @@ public class BlueAutoCarry extends LinearOpMode {
 
         dropPully(950);
 
+<<<<<<< HEAD
         turn(-1, 150);
 
         drive(-1, 1400);
+=======
+        drive(-1, 900);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
     }
 
@@ -166,7 +230,11 @@ public class BlueAutoCarry extends LinearOpMode {
         }
     }
 
+<<<<<<< HEAD
     public void strafe(double direction, int time) throws InterruptedException {
+=======
+    public void strafe(int direction, int time) throws InterruptedException {
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
         timer = new ElapsedTime();
         rightBack.setDirection(DcMotorSimple.Direction.REVERSE);
         leftFront.setDirection(DcMotorSimple.Direction.FORWARD);
@@ -223,7 +291,11 @@ public class BlueAutoCarry extends LinearOpMode {
     }
 
     public void dropDuck(int time) throws InterruptedException {
+<<<<<<< HEAD
         duckRight.setPosition(.60);
+=======
+        duckRight.setPosition(.65);
+>>>>>>> fa5fa4e (Almost done with blue carry - just need to mirror and get cycles done - this is gonna be a pain)
 
         timer = new ElapsedTime();
         while (timer.milliseconds() <= time) {
