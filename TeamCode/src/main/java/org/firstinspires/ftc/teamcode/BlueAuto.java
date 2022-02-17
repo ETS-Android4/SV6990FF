@@ -38,8 +38,6 @@ public class BlueAuto extends LinearOpMode {
 
         strafe(-1, 1400);
 
-        strafe(-.25, 2000);
-
         sleep(1);
 
         dropDuck(4000);      // Duck spinner
@@ -106,7 +104,7 @@ public class BlueAuto extends LinearOpMode {
         }
     }
 
-    public void strafe(double direction, int time) throws InterruptedException {
+    public void strafe(int direction, int time) throws InterruptedException {
         timer = new ElapsedTime();
         rightBack.setDirection(DcMotorSimple.Direction.REVERSE);
         leftFront.setDirection(DcMotorSimple.Direction.FORWARD);

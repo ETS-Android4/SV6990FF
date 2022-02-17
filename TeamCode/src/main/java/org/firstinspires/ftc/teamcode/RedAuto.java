@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 @Autonomous
 public class RedAuto extends LinearOpMode {
     private DcMotorEx leftFront, leftBack, rightFront, rightBack, intake, outtake, delivery1, delivery2;
-    private Servo duckRight, pully, duckLeft;
+    private Servo duckRight, pully, duckleft;
     private DcMotorEx[] motors;
     private final double TPI = 33.5625;
     private ElapsedTime timer;
@@ -69,7 +69,7 @@ public class RedAuto extends LinearOpMode {
         outtake = (DcMotorEx) hardwareMap.dcMotor.get("outtake");
         duckRight = (Servo) hardwareMap.get("duckRight");
         pully = (Servo) hardwareMap.get("pully");
-        duckLeft = (Servo) hardwareMap.get("duckLeft");
+        duckleft = (Servo) hardwareMap.get("duckLeft");
 
         motors = new DcMotorEx[]{leftFront, leftBack, rightFront, rightBack};
 
@@ -162,14 +162,14 @@ public class RedAuto extends LinearOpMode {
     }
 
     public void dropDuck(int time) throws InterruptedException {
-        duckLeft.setPosition(-1);
+        duckRight.setPosition(1);
         timer = new ElapsedTime();
         while (timer.milliseconds() <= time) {
             if (!opModeIsActive()) {
                 throw new InterruptedException();
             }
         }
-        duckLeft.setPosition(.5);
+        duckRight.setPosition(.5);
     }
 
     public void raisePully(int time) throws InterruptedException {
@@ -215,4 +215,3 @@ public class RedAuto extends LinearOpMode {
 
 
 }
-//blah
