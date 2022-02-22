@@ -18,7 +18,7 @@ public class TeleOP extends OpMode {
     private BNO055IMU imu;
     @Override
 
-    //test yay;
+    //FL goes to port 0, BL goes to port 1, BR goes to port 2, FR goes to port 3
 
     public void init() {
         //Maps all the variables to its respective hardware
