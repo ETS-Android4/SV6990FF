@@ -43,9 +43,6 @@ public class TeleOP extends OpMode {
         delivery2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         outtake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-
-        //Setting the motors' power to 69 hahaha funny sex number, haha sex funny imo, guy s this is too funny imo, its crazy funny. It makes me go haha, funny sex, its like 420, but instead of weed its the funny sex instead of funny weed, but 420 is also pretty funny as the funny drug number that you smoke weed to. Although 420 is funny, 69 is the funner number as 69 is like balls, and balls are funny imo, because i like balls. Balls are a funny thing to laugh at because balls are like testicles, and lemme tell you how funny testicles are. sorry i got off topic, 69 is funny number BECAUSE SEX, and that is just funny, it really is super funny, and is the entire definition of comedy. - Julian
-
         //Initialize the motors to begin stationary
         leftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         leftBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -73,8 +70,6 @@ public class TeleOP extends OpMode {
         togglePrecision = false;
         reverse = false;
     }
-
-    //Nick Pushing
 
     @Override
     public void loop() {
@@ -117,7 +112,8 @@ public class TeleOP extends OpMode {
 
         /*else{
             duckLeft.setPosition(.5);
-        duckRight.setPosition(.5);}*/
+        duckRight.setPosition(.5);}
+        */
 
         
 
@@ -125,7 +121,6 @@ public class TeleOP extends OpMode {
         telemetry.addData("Precision",togglePrecision);
         telemetry.addData("Reverse",reverse);
         //toggles precision mode if the right stick button is pressed
-
 
 
         //sets the factor multiplied to the power of the motors
@@ -171,5 +166,3 @@ public class TeleOP extends OpMode {
 
 
 }
-
-//this is a comment to test if I can edit the code
