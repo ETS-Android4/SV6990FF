@@ -18,21 +18,20 @@ public class TeleOP extends OpMode {
     private BNO055IMU imu;
     @Override
 
-    //FL goes to port 0, BL goes to port 1, BR goes to port 2, FR goes to port 3
-
     public void init() {
         //Maps all the variables to its respective hardware
-        leftFront = (DcMotorEx) hardwareMap.dcMotor.get("FL");
-        leftBack = (DcMotorEx) hardwareMap.dcMotor.get("BL");
-        rightFront = (DcMotorEx) hardwareMap.dcMotor.get("FR");
-        rightBack = (DcMotorEx) hardwareMap.dcMotor.get("BR");
+        leftFront = (DcMotorEx) hardwareMap.dcMotor.get("FL"); //port 0 on control hub
+        leftBack = (DcMotorEx) hardwareMap.dcMotor.get("BL"); //port 1 on control hub
+        rightFront = (DcMotorEx) hardwareMap.dcMotor.get("FR"); // port 3 on control hub
+        rightBack = (DcMotorEx) hardwareMap.dcMotor.get("BR"); //port 2 on control hub
         intake = (DcMotorEx) hardwareMap.dcMotor.get("intake");
-        delivery1 = (DcMotorEx) hardwareMap.dcMotor.get("delivery1");
-        delivery2 = (DcMotorEx) hardwareMap.dcMotor.get("delivery2");
+        delivery1 = (DcMotorEx) hardwareMap.dcMotor.get("delivery1"); //port on 1 expansion hub
+        delivery2 = (DcMotorEx) hardwareMap.dcMotor.get("delivery2"); //port on 2 expansion hub
         outtake = (DcMotorEx) hardwareMap.dcMotor.get("outtake");
         duckLeft = (Servo) hardwareMap.get("duckLeft");
         duckRight = (Servo) hardwareMap.get("duckRight");
         pully = (Servo) hardwareMap.get("pully");
+
         //Initialize all the hardware to use Encoders
         leftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
